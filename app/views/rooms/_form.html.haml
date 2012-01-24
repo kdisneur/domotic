@@ -1,0 +1,13 @@
+= form_for room do |f|
+  
+  = f.text_field :name, :placeholder => t('.example.name')
+  
+  - if room.persisted?
+    %div.clearfix
+      =f.label :lamps
+      %div.input
+        %div#listing-lamps= render "listing_lamps"
+  
+  %div.actions
+    = f.submit t('views.save'), :class => "btn primary"
+    = button_tag t('views.cancel'), :type => "reset", :class => "btn"

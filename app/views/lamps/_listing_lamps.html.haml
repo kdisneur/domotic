@@ -1,0 +1,19 @@
+= will_paginate paging_lamps, :params => { :controller => :lamps, :action => :show_partial }
+%table.bordered-table.zebra-striped
+  %tr
+    %thead
+      %th= t('.name')
+      %th= t('.code')
+      %th= t('.room')
+      %th{:colspan => 2}
+      %th{:colspan => 2}
+    %tbody
+      - paging_lamps.each do |lamp|
+        %tr
+          %td= lamp.name
+          %td= "#{lamp.house_code}#{lamp.unit_code}"
+          %td= lamp.room.name unless lamp.room.nil?
+          %td= link_to t('views.edit'), edit_lamp_path(lamp), :class => "btn"
+          %td= link_to t('views.destroy'), lamp, confirm: t('views.confirmation'), :method => :delete, :class => "btn danger"
+          %td= button_to t('views.light_on'),  light_on_path(lamp), :class => "btn success"
+          %td= button_to t('views.light_off'), light_off_path(lamp), :method => :delete, :class => "btn danger"

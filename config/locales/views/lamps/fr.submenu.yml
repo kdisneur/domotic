@@ -1,0 +1,5 @@
+fr:
+  submenu:
+    lamps:
+      show_all:     "Toutes"
+      create_lamp:  "Créer une lampe"

@@ -1,0 +1,7 @@
+fr:
+  lamps:
+    form:
+      example:
+        name:       "Exple: vitrine"
+        house_code: "Lettre en 'A' et 'P'"
+        unit_code:  "Chiffre entre 1 et 16"

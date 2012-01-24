@@ -1,0 +1,10 @@
+fr:
+  views:
+    title:        "Domotic"
+    edit:         "Modifier"
+    destroy:      "Supprimer"
+    confirmation: "Êtes-vous sûr?"
+    light_on:     "Allumer"
+    light_off:    "Eteindre"
+    save:         "Enregistrer"
+    cancel:       "Annuler"

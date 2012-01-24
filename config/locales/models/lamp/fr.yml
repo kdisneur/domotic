@@ -1,0 +1,16 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        lamp:
+          attributes:
+            house_code:
+              is_not_a_valid_house_code: "n'est pas un code house valide"
+    models:
+      lamp:         "Lampe"
+    attributes:
+      lamp:
+        house_code: "Code house"
+        unit_code:  "Code unité"
+        name:       "Nom"
+        room_id:    "Pièce"

@@ -1,0 +1,5 @@
+fr:
+  submenu:
+    rooms:
+      show_all:     "Toutes"
+      create_room:  "Créer une pièce"

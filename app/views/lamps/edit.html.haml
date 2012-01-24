@@ -1,0 +1,10 @@
+= content_for :title, t('.title', :name => lamp.name.capitalize)
+
+= sub_menu_lamps
+
+%div.row
+  %div.span11= render 'form'
+  %div.span5.info
+    %p= t('.explain_how_to_light_on_or_off_the_module')
+    %p= button_to t('views.light_on'),  light_on_path(lamp), :class => "btn success"
+    %p= button_to t('views.light_off'), light_off_path(lamp), :method => :delete, :class => "btn danger"

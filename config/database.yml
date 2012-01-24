@@ -1,0 +1,23 @@
+development:
+  adapter:  mysql2
+  database: domotic_dev
+  port:     3306
+  username: root
+  password: evie0eiy
+
+test: &test
+  adapter:  mysql2
+  database: domotic_test
+  port:     3306
+  username: root
+  password: evie0eiy
+
+production:
+  adapter:  mysql2
+  database: domotic_production
+  port:     3306
+  username: root
+  password: evie0eiy
+
+cucumber:
+  <<: *test

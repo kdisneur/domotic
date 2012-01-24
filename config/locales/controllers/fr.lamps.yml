@@ -1,0 +1,5 @@
+fr:
+  lamps:
+    controller:
+      created: "La lampe a bien été créée."
+      updated: "La lampe a bien été mise à jour."

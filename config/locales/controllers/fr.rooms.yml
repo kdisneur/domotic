@@ -1,0 +1,5 @@
+fr:
+  rooms:
+    controller:
+      created: "La pièce a bien été créée."
+      updated: "La pièce a bien été mise à jour."

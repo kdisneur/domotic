@@ -1,0 +1,13 @@
+= will_paginate paging_rooms, :params => { :controller => :rooms, :action => :show_partial }
+%table.bordered-table.zebra-striped
+  %tr
+    %thead
+      %th= t('.name')
+      %th{:colspan => 2}
+    %tbody
+      - paging_rooms.each do |room|
+        %tr
+          %td= room.name
+          %td= link_to t('views.edit'), edit_room_path(room), :class => "btn"
+          %td= link_to t('views.destroy'), room, confirm: t('views.confirmation'), :method => :delete, :class => "btn danger"
+          

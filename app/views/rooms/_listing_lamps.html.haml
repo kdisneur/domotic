@@ -1,0 +1,36 @@
+= will_paginate paging_lamps, :params => { :controller => :lamps, :action => :show_partial }
+%table.zebra-striped
+  %tr
+    %thead
+      %th 
+      %th= t('.name')
+      %th= t('.code')
+    %tbody
+      - paging_lamps.each do |lamp|
+        %tr
+          %td.span1
+            %div.input
+              %div.input-prepend
+                - if lamp.room == room
+                  %label.add-on.active
+                    %input{ :type => 'checkbox', :name => "lamp_#{lamp.id}", :id => "lamp_#{lamp.id}", :checked => 'checked', :url => lamp_path(lamp), :room => room.id }
+                - elsif not lamp.room.nil?
+                  %label.add-on.already-use
+                    %input{ :type => 'checkbox', :name => "lamp_#{lamp.id}", :id => "lamp_#{lamp.id}", :url => lamp_path(lamp), :room => room.id }
+                - else
+                  %label.add-on
+                    %input{ :type => 'checkbox', :name => "lamp_#{lamp.id}", :id => "lamp_#{lamp.id}", :url => lamp_path(lamp), :room => room.id }
+          %td
+            %label{ :for => "lamp_#{lamp.id}" }= lamp.name
+          %td= "#{lamp.house_code}#{lamp.unit_code}"
+
+%div#lamp-already-use-in-another-room.modal.hide.fade
+  %div.modal-header
+    %a.close{:href => "#"} x
+    %h3= t('.popup.title')
+  %div.modal-body
+    %p= t('.popup.lamp_already_used_in_another_room')
+    %p= t('.popup.confirmation')
+  %div.modal-footer
+    %a.btn.primary{:href => "#"} Yes
+    %a.btn.secondary{:href => "#"} No

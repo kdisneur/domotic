@@ -1,0 +1,9 @@
+fr:
+  rooms:
+    listing_lamps:
+      name: "Nom"
+      code: "Code"
+      popup:
+        title: Confirmation de position
+        lamp_already_used_in_another_room: Cette lampe est déjà positionnée dans une autre pièce!
+        confirmation: Êtes-vous sur de vouloir modifier sa localisation?

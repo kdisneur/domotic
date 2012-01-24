@@ -1,0 +1,4 @@
+fr:
+  rooms:
+    edit:
+      title:  "Edition de %{name}"

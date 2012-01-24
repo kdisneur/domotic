@@ -1,0 +1,8 @@
+fr:
+  activerecord:
+    models:
+      room:         "Pièce"
+    attributes:
+      room:
+        name:       "Nom"
+        lamps:      "Lampes"

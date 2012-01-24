@@ -1,0 +1,6 @@
+fr:
+  lamps:
+    listing_lamps:
+      name: "Nom"
+      code: "Code"
+      room: "Pièce"

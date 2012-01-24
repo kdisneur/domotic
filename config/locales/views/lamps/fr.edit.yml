@@ -1,0 +1,5 @@
+fr:
+  lamps:
+    edit:
+      title:  "Edition de %{name}"
+      explain_how_to_light_on_or_off_the_module: "Vous pouvez allumer ou éteindre votre lampe en appuyant simplement sur le bouton suivant"

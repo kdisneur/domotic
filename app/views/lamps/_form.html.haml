@@ -1,0 +1,13 @@
+= form_for lamp do |f|
+  
+  = f.text_field :name, :placeholder => t('.example.name')
+
+  = f.text_field :house_code, :placeholder => t('.example.house_code')
+  
+  = f.number_field :unit_code, :placeholder => t('.example.unit_code')
+  
+  = f.select :room_id, options_for_select(rooms.map { |room|[room.name, room.id] }, lamp.room_id), :include_blank => true
+    
+  %div.actions
+    = f.submit t('views.save'), :class => "btn primary"
+    = button_tag t('views.cancel'), :type => "reset", :class => "btn"

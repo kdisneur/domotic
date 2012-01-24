@@ -1,0 +1,9 @@
+syntax: glob 
+tmp/*
+*.orig
+*.log
+public/uploads/*
+.project
+*.sublime-project
+*.sublime-workspace
+*~
